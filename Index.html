@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Fee Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Login Page -->
+  <div id="login-page" class="container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="User ID" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboard" class="hidden">
+    <div class="form-section">
+      <h2>Add Student</h2>
+      <input type="text" id="studentName" placeholder="Student Name" />
+      <select id="course">
+        <option value="">Select Course</option>
+        <option value="BBA">BBA</option>
+        <option value="BCA">BCA</option>
+        <option value="MCA">MCA</option>
+      </select>
+      <select id="semester">
+        <option value="">Select Semester</option>
+        <option value="1st">1st</option>
+        <option value="2nd">2nd</option>
+        <option value="3rd">3rd</option>
+        <option value="4th">4th</option>
+        <option value="5th">5th</option>
+        <option value="6th">6th</option>
+        <option value="7th">7th</option>
+        <option value="8th">8th</option>
+      </select>
+      <input type="number" id="studentFee" placeholder="Fee Amount" />
+      <input type="file" id="photo" />
+      <div>
+        <button onclick="addStudent()">Add</button>
+        <button onclick="resetForm()">Reset</button>
+        <button onclick="exportToPDF()">Export PDF</button>
+      </div>
+    </div>
+
+    <!-- Records Table -->
+    <div class="table-section">
+      <h2>Student Records</h2>
+      <table id="studentTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Semester</th>
+            <th>Fee</th>
+            <th>Status</th>
+            <th>Photo</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
